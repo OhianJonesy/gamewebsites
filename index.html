@@ -26,15 +26,14 @@
     </style>
   </head>
   <body>
-    <!-- Button to activate cloaking -->
-    <button class="button" onclick="openGame()">Click to Activate</button>
+    <button class="button" onclick="openCloaked()">Click to Launch Cloaker</button>
 
     <script>
-      function openGame() {
-        // Opens the target website in a new tab
-        window.open("https://sites.google.com/k12.friscoisd.org/plsdontbloc-shdggyyyywywcde/home", "_blank", "noopener,noreferrer");
-        // Optionally close the cloaker window after opening the target site
-        window.close();
+      function openCloaked() {
+        const win = window.open();
+        win.document.write(`
+          <iframe src="https://sites.google.com/k12.friscoisd.org/plsdontbloc-shdggyyyywywcde/home" frameborder="0" style="position:fixed;top:0;left:0;width:100%;height:100%;border:none;"></iframe>
+        `);
       }
     </script>
   </body>
